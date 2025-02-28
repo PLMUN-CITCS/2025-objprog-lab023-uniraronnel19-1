@@ -1,3 +1,15 @@
+public class BankAccountDemo {
+    public static void main(String[] args) {
+        BankAccount myAccount = new BankAccount("Alice", 1000.0, "Checking");
+        
+        myAccount.deposit(250.0);
+        myAccount.withdraw(100.0);
+        System.out.println("Account Holder: " + myAccount.accountHolder);
+        System.out.println("Account Type: " + myAccount.accountType);
+        System.out.println("Current Balance: $" + myAccount.getBalance());
+    }
+}
+
 class BankAccount {
     public String accountHolder;
     private double balance;
@@ -23,17 +35,5 @@ class BankAccount {
     
     public double getBalance() {
         return balance;
-    }
-}
-
-public class BankAccountDemo {
-    public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount("Alice", 1000.0, "Checking");
-        
-        myAccount.deposit(250.0);
-        myAccount.withdraw(100.0);
-        System.out.println("Account Holder: " + myAccount.accountHolder);
-        System.out.println("Account Type: " + myAccount.accountType);
-        System.out.println("Current Balance: $" + myAccount.getBalance());
     }
 }
